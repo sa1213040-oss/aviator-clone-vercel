@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
-// تمام امپورٹس سے './components/' ہٹا دیا گیا
-import Header from './Header.tsx'; 
-import HistoryBar from './HistoryBar.tsx';
-import GameCanvas from './GameCanvas.tsx';
-import BetPanel from './BetPanel.tsx';
-import StatsPanel from './StatsPanel.tsx';
-import FloatingSidebar from './FloatingSidebar.tsx';
+// تمام امپورٹس کو چھوٹے حروف (Lower-case) سے میچ کیا گیا ہے:
+import Header from './header.tsx'; 
+import HistoryBar from './historybar.tsx'; 
+import GameCanvas from './gameCanvas.tsx'; 
+import BetPanel from './betPanel.tsx'; 
+import StatsPanel from './statsPanel.tsx'; 
+import FloatingSidebar from './floatingSidebar.tsx'; 
 import { GameStatus, MultiplierHistoryItem, UserBetHistoryItem } from './types';
 import { X } from 'lucide-react';
 
 // ==============================
 // CRASH MULTIPLIER PLAN
-// ... (باقی کا کوڈ وہی رہے گا)
+// ==============================
 
 const FORWARD_RUN = [
   1.41, 110.09, 3.26, 1.73, 1.18, 1.56, 1.29,
@@ -381,6 +381,10 @@ const App: React.FC = () => {
                 Drag from top and swipe from the left or right edge to exit full screen.
             </p>
         </div>
+        {/* Audio unlock reminder for user interaction */}
+        {audioEnabledRef.current === false && (
+          <div className="absolute top-10 text-xs text-gray-500">Tap anywhere to enable sound.</div>
+        )}
       </div>
     );
   }
