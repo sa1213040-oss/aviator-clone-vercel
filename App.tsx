@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Header from './components/Header.tsx'; // ✅ .tsx added
-import HistoryBar from './components/HistoryBar.tsx'; // ✅ .tsx added
-import GameCanvas from './components/GameCanvas.tsx'; // ✅ .tsx added
-import BetPanel from './components/BetPanel.tsx'; // ✅ .tsx added
-import StatsPanel from './components/StatsPanel.tsx'; // ✅ .tsx added
-import FloatingSidebar from './components/FloatingSidebar.tsx'; // ✅ .tsx added
+// تمام امپورٹس سے './components/' ہٹا دیا گیا
+import Header from './Header.tsx'; 
+import HistoryBar from './HistoryBar.tsx';
+import GameCanvas from './GameCanvas.tsx';
+import BetPanel from './BetPanel.tsx';
+import StatsPanel from './StatsPanel.tsx';
+import FloatingSidebar from './FloatingSidebar.tsx';
 import { GameStatus, MultiplierHistoryItem, UserBetHistoryItem } from './types';
 import { X } from 'lucide-react';
 
 // ==============================
 // CRASH MULTIPLIER PLAN
-// ==============================
+// ... (باقی کا کوڈ وہی رہے گا)
 
 const FORWARD_RUN = [
   1.41, 110.09, 3.26, 1.73, 1.18, 1.56, 1.29,
