@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-// تمام امپورٹس کو چھوٹے حروف (Lower-case) سے میچ کیا گیا ہے:
-import Header from './header.tsx'; 
-import HistoryBar from './historybar.tsx'; 
-import GameCanvas from './gameCanvas.tsx'; 
-import BetPanel from './betPanel.tsx'; 
-import StatsPanel from './statsPanel.tsx'; 
-import FloatingSidebar from './floatingSidebar.tsx'; 
+// تمام امپورٹس کو GitHub پر موجود فائل ناموں سے میچ کیا گیا ہے (بڑے حروف - Upper-case)
+import Header from './Header.tsx'; 
+import HistoryBar from './HistoryBar.tsx'; 
+import GameCanvas from './GameCanvas.tsx'; 
+import BetPanel from './BetPanel.tsx'; 
+import StatsPanel from './StatsPanel.tsx'; 
+import FloatingSidebar from './FloatingSidebar.tsx'; 
 import { GameStatus, MultiplierHistoryItem, UserBetHistoryItem } from './types';
 import { X } from 'lucide-react';
 
@@ -128,20 +128,20 @@ const App: React.FC = () => {
   // ============================================
   useEffect(() => {
     // 1. Initialize Audio Objects with Correct Paths (Removed leading '/')
-    const bgm = new Audio('bgm/bgm.mp3'); // ✅ Slashed removed
+    const bgm = new Audio('bgm/bgm.mp3'); 
     bgm.loop = true;
     bgm.volume = 0.3; // Lower volume for background
     bgmRef.current = bgm;
 
-    const crash = new Audio('crash/crash.mp3'); // ✅ Slashed removed
+    const crash = new Audio('crash/crash.mp3'); 
     crash.volume = 0.6;
     crashRef.current = crash;
 
-    const win = new Audio('win/win.mp3'); // ✅ Slashed removed
+    const win = new Audio('win/win.mp3'); 
     win.volume = 0.7;
     winRef.current = win;
 
-    const countdown = new Audio('countdown/ready.mp3'); // ✅ Slashed removed
+    const countdown = new Audio('countdown/ready.mp3'); 
     countdown.volume = 0.6;
     countdownRef.current = countdown;
 
@@ -331,6 +331,7 @@ const App: React.FC = () => {
           }
             
           animationFrameRef.current = requestAnimationFrame(animate);
+
         };
         
         animationFrameRef.current = requestAnimationFrame(animate);
@@ -381,10 +382,6 @@ const App: React.FC = () => {
                 Drag from top and swipe from the left or right edge to exit full screen.
             </p>
         </div>
-        {/* Audio unlock reminder for user interaction */}
-        {audioEnabledRef.current === false && (
-          <div className="absolute top-10 text-xs text-gray-500">Tap anywhere to enable sound.</div>
-        )}
       </div>
     );
   }
