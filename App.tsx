@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-// تمام امپورٹس کو GitHub پر موجود فائل ناموں سے میچ کیا گیا ہے (بڑے حروف - Upper-case)
-import Header from './Header.tsx'; 
-import HistoryBar from './HistoryBar.tsx'; 
-import GameCanvas from './GameCanvas.tsx'; 
-import BetPanel from './BetPanel.tsx'; 
-import StatsPanel from './StatsPanel.tsx'; 
-import FloatingSidebar from './FloatingSidebar.tsx'; 
+// تمام امپورٹس کو چھوٹے حروف (Lower-case) سے میچ کیا گیا ہے تاکہ کیس سینسیٹیویٹی کا مسئلہ حل ہو:
+import Header from './header.tsx'; 
+import HistoryBar from './historyBar.tsx'; 
+import GameCanvas from './gameCanvas.tsx'; 
+import BetPanel from './betPanel.tsx'; 
+import StatsPanel from './statsPanel.tsx'; 
+import FloatingSidebar from './floatingSidebar.tsx'; 
 import { GameStatus, MultiplierHistoryItem, UserBetHistoryItem } from './types';
 import { X } from 'lucide-react';
 
